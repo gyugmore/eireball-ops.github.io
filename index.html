@@ -20,6 +20,29 @@
             justify-content: center;
             min-height: 100vh;
             padding: 20px;
+            position: relative;
+        }
+
+        /* Vytvorenie šachovnicového efektu */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            /* Generovanie mriežky pomocou lineárnych gradientov */
+            background-image: 
+                linear-gradient(45deg, #f0f0f0 25%, transparent 25%), 
+                linear-gradient(-45deg, #f0f0f0 25%, transparent 25%), 
+                linear-gradient(45deg, transparent 75%, #f0f0f0 75%), 
+                linear-gradient(-45deg, transparent 75%, #f0f0f0 75%);
+            background-size: 40px 40px;
+            background-position: 0 0, 0 20px, 20px -20px, -20px 0;
+            /* Maska, ktorá zabezpečí postupné strácanie (fade) smerom nadol */
+            -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+            mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
         }
 
         h2 {
@@ -97,22 +120,22 @@
 
     <div class="container">
         <!-- Itinerary Card -->
-        <a href="YOUR_ITINERARY_URL_HERE" class="card cream">
+        <a href="https://da.gd" class="card cream">
             <div class="card-header">
                 <span class="icon">📍</span>
                 <span class="title">itinerary</span>
             </div>
-            <p class="description">explore detailed travel routes and curated daily schedules.</p>
+            <p class="description">irsko 26</p>
             <div class="visit-link">visit &rarr;</div>
         </a>
 
         <!-- Irish Phrases Card -->
-        <a href="YOUR_SPREADSHEET_URL_HERE" class="card white">
+        <a href="https://da.gd" class="card white">
             <div class="card-header">
                 <span class="icon">🗣️</span>
                 <span class="title">irish phrases</span>
             </div>
-            <p class="description">access the spreadsheet featuring 80 essential irish phrases.</p>
+            <p class="description">theres 84 phrases total!!</p>
             <div class="visit-link">visit &rarr;</div>
         </a>
     </div>
